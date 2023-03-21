@@ -7,7 +7,7 @@ export const restrictedWords = (words: any) => {
 
           var invalidWords = words
           .map((w: any) => control.value.includes(w) ? w: {})
-          .filter((w: any) => w != {})
+          .filter((w: any) => w != true)
           return invalidWords && invalidWords.length > 0
           ? {'restrictedWords': invalidWords.join(',')}
           : {}
