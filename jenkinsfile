@@ -7,6 +7,10 @@ node {
             bat "npm install"
       }
       
+      stage('Test') {
+            bat "npm run test-headless"
+      }
+      
       stage('Build') {
             bat "npm run build"
       }
