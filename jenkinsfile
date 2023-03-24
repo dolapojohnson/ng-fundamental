@@ -5,6 +5,7 @@ node {
       
       stage('Install node modules') {
             bat "npm install"
+            bat "npm install -g @angular/cli"
       }
       
       stage('Test') {
@@ -13,5 +14,12 @@ node {
       
       stage('Build') {
             bat "npm run build"
+      }
+      
+      stage('Archive Results') {
+            steps {
+                  //Archive build results
+                  archiveArtifacts "dist/*"
+            }
       }
 }
