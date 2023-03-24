@@ -8,7 +8,7 @@ node {
       }
       
       stage('Test') {
-            bat "npm run test-headless"
+            bat "npm run test"
       }
       
       stage('Build') {
