@@ -17,10 +17,10 @@ node {
             // bat "npm run test"
       }
       
-      stage('Archive Results') {
+      stage('Archive Artifacts') {
             steps {
                   //Archive build results
-                  archiveArtifacts "dist/*"
+                  artifacts: 'dist/**', allowEmptyArchive: true
             }
       }
 }
