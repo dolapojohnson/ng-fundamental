@@ -20,7 +20,7 @@ node {
       stage('Archive Artifacts') {
             steps {
                   //Archive build results
-                  artifacts: 'dist/**', allowEmptyArchive: true
+                  artifacts: "dist/**", allowEmptyArchive: true
             }
       }
 }
