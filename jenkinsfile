@@ -19,8 +19,10 @@ node {
       
       stage('Archive Artifacts') {
             steps {
-                  //Archive build results
-                  archiveArtifacts artifacts: "dist/**", allowEmptyArchive: true
+                //Archive build results
+                script {
+                    archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true
+                }
             }
       }
 }
